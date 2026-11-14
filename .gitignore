@@ -49,8 +49,8 @@ htmlcov/
 *.tmp
 
 # Generated patient reports
-backend/uploads/patient_reports/
+backend/uploads/patient_reports/*
+!backend/uploads/patient_reports/.gitkeep
 
 # Model artifacts
-backend/models/disease_prediction_model.pkl
-backend/medassist_disease_model*.pkl
+backend/medassist_disease_model .pkl
