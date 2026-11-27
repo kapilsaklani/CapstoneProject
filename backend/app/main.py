@@ -8,12 +8,14 @@ from app.auth import router as auth_router
 from app.patient import router as patient_router
 from app.caretaker import router as caretaker_router
 from app.analytics import router as analytics_router
+from app.multi_disease_router import router as multi_disease_router
+from app.agent_router import router as agent_router
 
 
 app = FastAPI(
     title="MedAssist AI API",
-    description="AI-Powered Disease Prediction, Patient Risk Assessment & Healthcare Analytics API",
-    version="1.0.0"
+    description="AI-Powered Disease Prediction, Multi-Disease Risk Engine, Clinical AI Agents & Healthcare Analytics API",
+    version="2.0.0"
 )
 
 # CORS Configuration - Allow all origins
@@ -40,12 +42,35 @@ async def global_exception_handler(request: Request, exc: Exception):
 @app.on_event("startup")
 def on_startup():
     init_db_tables()
+    try:
+        from app.core.database import Base, engine
+        Base.metadata.create_all(bind=engine)
+    except Exception as e:
+        print(f"Core DB tables init warning: {e}")
 
 
 app.include_router(auth_router)
 app.include_router(patient_router)
 app.include_router(caretaker_router)
 app.include_router(analytics_router)
+app.include_router(multi_disease_router)
+app.include_router(agent_router)
+
+# Include user-provided API routers
+try:
+    from routers.doctor import router as user_doctor_router
+    from routers.care_plan import router as user_care_plan_router
+    from routers.lab_reports import router as user_lab_reports_router
+    from routers.patients import router as user_patients_router
+    from routers.vitals import router as user_vitals_router
+
+    app.include_router(user_doctor_router)
+    app.include_router(user_care_plan_router)
+    app.include_router(user_lab_reports_router)
+    app.include_router(user_patients_router)
+    app.include_router(user_vitals_router)
+except Exception as e:
+    print(f"Notice: user routers load exception: {e}")
 
 @app.get("/")
 def read_root():

@@ -82,6 +82,29 @@
     transition: all 0.2s ease;
 }
 
+.app-navbar__agent-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.25), rgba(2, 132, 199, 0.25));
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.app-navbar__agent-link:hover {
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.4), rgba(2, 132, 199, 0.4));
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
+}
+
 .app-navbar__profile:hover {
     background: rgba(56, 189, 248, 0.22);
     color: #ffffff;

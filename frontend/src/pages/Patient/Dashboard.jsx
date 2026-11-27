@@ -20,7 +20,8 @@ import {
     FaChartLine,
     FaClipboardCheck,
     FaHospital,
-    FaChartBar
+    FaChartBar,
+    FaShieldAlt
 } from "react-icons/fa";
 
 import DashboardCard from "../../components/DashboardCard";
@@ -210,6 +211,20 @@ function PatientDashboard() {
                 {/* Dashboard Modules */}
 
                 <section className="dashboard-grid">
+
+                    <DashboardCard
+                        to="/patient/ai-agent"
+                        icon={<FaRobot />}
+                        title="AI Health Assistant"
+                        description="24/7 personal health companion for symptom guidance and risk explanations."
+                    />
+
+                    <DashboardCard
+                        to="/patient/multi-disease-assessment"
+                        icon={<FaShieldAlt />}
+                        title="Multi-Disease AI Engine"
+                        description="Screen Diabetes, Cardiovascular Heart Disease, and Breast Cancer Biopsy risks."
+                    />
 
                     <DashboardCard
                         to="/patient/profile"

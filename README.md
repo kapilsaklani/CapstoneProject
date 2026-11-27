@@ -9,6 +9,7 @@
 
 **MedAssist AI** is an end-to-end, full-stack intelligent healthcare platform designed to empower patients and assist medical professionals. It leverages machine learning to predict potential diseases from symptoms, evaluate clinical risk factors, recommend personalized treatment options, generate downloadable clinical reports, and provide interactive healthcare analytics with caretaker collaboration.
 
+
 ---
 
 ## 🌟 Key Features
@@ -46,6 +47,18 @@
 ### 6. 🤝 Caretaker Collaboration & Patient Monitoring
 - Dedicated **Caretaker Portal** for doctors, nurses, and family caretakers.
 - Allows caretakers to view assigned patients, inspect historical predictions, monitor risk levels, review uploaded medical records, and update professional profiles.
+
+### 7. 🔬 Multi-Disease Explainable Risk Engine
+- Dedicated machine learning pipelines for specific high-prevalence chronic diseases:
+  - **Type 2 Diabetes Risk Model:** RandomForestClassifier trained on metabolic features (Glucose, Insulin, BMI, Age, Pedigree).
+  - **Coronary Heart Disease Risk Model:** GradientBoostingClassifier assessing 13 cardiovascular markers (Resting BP, Cholesterol, Thalach, ST Depression, Fluoroscopy).
+  - **Breast Cancer Biopsy Screening:** RandomForestClassifier evaluating 10 fine-needle aspirate (FNA) cell nucleus morphological characteristics.
+- **Explainable AI (XAI):** Calculates patient-specific z-score weighted feature contributions indicating which physiological markers push risk up vs. protective factors.
+- **Automated Rule Safeguards:** Real-time clinical threshold checks for severe hyperglycemia, hypertension, and ischemia.
+
+### 8. 🤖 Dual AI Clinical Agents (Patient & Doctor)
+- **Patient AI Health Assistant (`/patient/ai-agent`):** Empathetic 24/7 health companion for symptom guidance, plain-language risk explanations, preventative wellness recommendations, and automatic emergency triage red-flag warnings.
+- **Doctor Clinical Co-Pilot AI (`/caretaker/ai-copilot`):** Clinical decision support system for triage queue synthesis, feature importance breakdown, diagnostic workup suggestions, and automated SOAP clinical care plan drafting.
 
 ---
 

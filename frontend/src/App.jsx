@@ -17,6 +17,8 @@ import HealthReports from "./pages/Patient/HealthReports";
 import SelectCaretaker from "./pages/Patient/SelectCaretaker";
 import RiskAssessment from "./pages/Patient/RiskAssessment";
 import Analytics from "./pages/Patient/Analytics";
+import AIAgentsHub from "./pages/AIAgentsHub";
+import MultiDiseaseAssessment from "./pages/MultiDiseaseAssessment";
 
 // Caretaker
 import CaretakerProfile from "./pages/caretaker/CaretakerProfile";
@@ -53,12 +55,19 @@ function App() {
                     <Route path="/patient/select-caretaker" element={<SelectCaretaker />} />
                     <Route path="/patient/analytics" element={<Analytics />} />
                     <Route path="/patient/risk-assessment" element={<RiskAssessment />}/>
+                    <Route path="/patient/ai-agent" element={<AIAgentsHub initialRole="patient" />} />
+                    <Route path="/patient/multi-disease-assessment" element={<MultiDiseaseAssessment />} />
+
                     <Route path="/caretaker/profile" element={<CaretakerProfile />}/>
                     <Route path="/caretaker/dashboard" element={<CaretakerDashboard />} />
                     <Route path="/caretaker/patients" element={<AssignedPatients />} />
                     <Route path="/caretaker/patients/:id" element={<PatientDetails />} />
                     <Route path="/caretaker/analytics" element={<CaretakerAnalytics />} />
                     <Route path="/caretaker/care-plans" element={<CarePlans />} />
+                    <Route path="/caretaker/ai-copilot" element={<AIAgentsHub initialRole="doctor" />} />
+
+                    {/* Universal AI Agents Hub */}
+                    <Route path="/ai-agents" element={<AIAgentsHub />} />
                 </Route>
             </Route>
 
