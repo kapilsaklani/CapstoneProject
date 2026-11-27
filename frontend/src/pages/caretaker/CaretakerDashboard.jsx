@@ -16,7 +16,8 @@ import {
     FaClock,
     FaUserMd,
     FaCheckCircle,
-    FaArrowRight
+    FaArrowRight,
+    FaRobot
 } from "react-icons/fa";
 
 import { getAssignedPatients, getCaretakerTriageQueue } from "../../services/caretakerService";
@@ -244,24 +245,24 @@ function CaretakerDashboard() {
                                     const badgeBg = isEmergency
                                         ? "rgba(239, 68, 68, 0.2)"
                                         : isUrgent
-                                        ? "rgba(245, 158, 11, 0.2)"
-                                        : item.triage_level === "MODERATE"
-                                        ? "rgba(56, 189, 248, 0.2)"
-                                        : "rgba(16, 185, 129, 0.2)";
+                                            ? "rgba(245, 158, 11, 0.2)"
+                                            : item.triage_level === "MODERATE"
+                                                ? "rgba(56, 189, 248, 0.2)"
+                                                : "rgba(16, 185, 129, 0.2)";
                                     const badgeBorder = isEmergency
                                         ? "#ef4444"
                                         : isUrgent
-                                        ? "#f59e0b"
-                                        : item.triage_level === "MODERATE"
-                                        ? "#38bdf8"
-                                        : "#10b981";
+                                            ? "#f59e0b"
+                                            : item.triage_level === "MODERATE"
+                                                ? "#38bdf8"
+                                                : "#10b981";
                                     const badgeColor = isEmergency
                                         ? "#fca5a5"
                                         : isUrgent
-                                        ? "#fde68a"
-                                        : item.triage_level === "MODERATE"
-                                        ? "#bae6fd"
-                                        : "#a7f3d0";
+                                            ? "#fde68a"
+                                            : item.triage_level === "MODERATE"
+                                                ? "#bae6fd"
+                                                : "#a7f3d0";
 
                                     return (
                                         <div
@@ -379,6 +380,22 @@ function CaretakerDashboard() {
                     </div>
 
                     <div className="dashboard-grid">
+                        <Link
+                            to="/caretaker/ai-copilot"
+                            className="dashboard-card"
+                            style={{ border: "1px solid rgba(99, 102, 241, 0.4)", background: "linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(15, 23, 42, 0.7))" }}
+                        >
+                            <div className="card-icon" style={{ color: "#818cf8" }}>
+                                <FaRobot />
+                            </div>
+                            <h3>
+                                Doctor AI Co-Pilot
+                            </h3>
+                            <p>
+                                Clinical decision support for triage synthesis, SOAP care plan drafting, and explainable ML risk factors.
+                            </p>
+                        </Link>
+
                         <Link
                             to="/caretaker/profile"
                             className="dashboard-card"
@@ -599,7 +616,7 @@ function CaretakerDashboard() {
 
                 </section>
 
-                            </div>
+            </div>
 
         </div>
 

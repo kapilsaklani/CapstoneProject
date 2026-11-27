@@ -1,0 +1,110 @@
+{
+  "disease": "heart_disease",
+  "feature_columns": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "feature_labels": {
+    "age": "Age",
+    "sex": "Sex",
+    "cp": "Chest Pain Type",
+    "trestbps": "Resting Blood Pressure",
+    "chol": "Serum Cholesterol",
+    "fbs": "Fasting Blood Sugar > 120 mg/dl",
+    "restecg": "Resting ECG Result",
+    "thalach": "Max Heart Rate Achieved",
+    "exang": "Exercise-Induced Angina",
+    "oldpeak": "ST Depression (exercise vs rest)",
+    "slope": "Slope of Peak Exercise ST Segment",
+    "ca": "Number of Major Vessels (0-3) Colored by Fluoroscopy",
+    "thal": "Thalassemia Result"
+  },
+  "feature_importances": {
+    "age": 0.05846857246726716,
+    "sex": 0.03678353686912189,
+    "cp": 0.2890035983443259,
+    "trestbps": 0.03625151648587844,
+    "chol": 0.07482934927686204,
+    "fbs": 0.0003975762255463028,
+    "restecg": 0.018659580091881317,
+    "thalach": 0.04690559700029353,
+    "exang": 0.03518542133509498,
+    "oldpeak": 0.1301591054108293,
+    "slope": 0.04403086294374335,
+    "ca": 0.08889642572161256,
+    "thal": 0.14042885782754325
+  },
+  "logreg_coefficients": {
+    "age": 0.008172981747864296,
+    "sex": -0.73968787084252,
+    "cp": 0.936240332330678,
+    "trestbps": -0.2057123135409727,
+    "chol": -0.48508242133294394,
+    "fbs": -0.06474283126352615,
+    "restecg": 0.2269120512465204,
+    "thalach": 0.5577404922271103,
+    "exang": -0.46604474918458016,
+    "oldpeak": -0.5846609426132571,
+    "slope": 0.3172756056224534,
+    "ca": -0.5652121564038399,
+    "thal": -0.6205049042189877
+  },
+  "metrics": {
+    "accuracy": 0.8197,
+    "f1_score": 0.8451,
+    "roc_auc": 0.8842,
+    "n_train": 242,
+    "n_test": 61,
+    "report": {
+      "0": {
+        "precision": 0.8695652173913043,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.7843137254901961,
+        "support": 28.0
+      },
+      "1": {
+        "precision": 0.7894736842105263,
+        "recall": 0.9090909090909091,
+        "f1-score": 0.8450704225352113,
+        "support": 33.0
+      },
+      "accuracy": 0.819672131147541,
+      "macro avg": {
+        "precision": 0.8295194508009154,
+        "recall": 0.8116883116883117,
+        "f1-score": 0.8146920740127037,
+        "support": 61.0
+      },
+      "weighted avg": {
+        "precision": 0.8262370109164572,
+        "recall": 0.819672131147541,
+        "f1-score": 0.8171821025801224,
+        "support": 61.0
+      }
+    }
+  },
+  "clinical_reference_ranges": {
+    "trestbps": {
+      "normal_max": 130,
+      "unit": "mm Hg"
+    },
+    "chol": {
+      "normal_max": 200,
+      "unit": "mg/dL"
+    },
+    "thalach": {
+      "note": "age-predicted max HR ~ 220-age"
+    }
+  }
+}

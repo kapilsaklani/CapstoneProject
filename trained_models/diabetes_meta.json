@@ -1,0 +1,89 @@
+{
+  "disease": "diabetes",
+  "feature_columns": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "feature_importances": {
+    "Pregnancies": 0.05538956830414212,
+    "Glucose": 0.34060334382487417,
+    "BloodPressure": 0.05377554460608959,
+    "SkinThickness": 0.055025855555617516,
+    "Insulin": 0.10532811814749889,
+    "BMI": 0.17798969358311897,
+    "DiabetesPedigreeFunction": 0.08711819797290822,
+    "Age": 0.12476967800575046
+  },
+  "logreg_coefficients": {
+    "Pregnancies": 0.3730189971538432,
+    "Glucose": 1.1834438806611995,
+    "BloodPressure": -0.014547911548349167,
+    "SkinThickness": 0.01387690837373817,
+    "Insulin": -0.0446512569377068,
+    "BMI": 0.7097094630649781,
+    "DiabetesPedigreeFunction": 0.2877454407583762,
+    "Age": 0.18639300169093925
+  },
+  "metrics": {
+    "accuracy": 0.7338,
+    "f1_score": 0.6555,
+    "roc_auc": 0.8154,
+    "n_train": 614,
+    "n_test": 154,
+    "report": {
+      "0": {
+        "precision": 0.8314606741573034,
+        "recall": 0.74,
+        "f1-score": 0.783068783068783,
+        "support": 100.0
+      },
+      "1": {
+        "precision": 0.6,
+        "recall": 0.7222222222222222,
+        "f1-score": 0.6554621848739496,
+        "support": 54.0
+      },
+      "accuracy": 0.7337662337662337,
+      "macro avg": {
+        "precision": 0.7157303370786516,
+        "recall": 0.731111111111111,
+        "f1-score": 0.7192654839713664,
+        "support": 154.0
+      },
+      "weighted avg": {
+        "precision": 0.750299139063184,
+        "recall": 0.7337662337662337,
+        "f1-score": 0.7383236122731921,
+        "support": 154.0
+      }
+    }
+  },
+  "medians_for_missing": {
+    "Glucose": 117.0,
+    "BloodPressure": 72.0,
+    "SkinThickness": 29.0,
+    "Insulin": 125.0,
+    "BMI": 32.3
+  },
+  "clinical_reference_ranges": {
+    "Glucose": {
+      "normal_max": 140,
+      "unit": "mg/dL",
+      "note": "fasting/random glucose"
+    },
+    "BloodPressure": {
+      "normal_max": 90,
+      "unit": "mm Hg (diastolic)"
+    },
+    "BMI": {
+      "normal_max": 25,
+      "unit": "kg/m^2"
+    }
+  }
+}

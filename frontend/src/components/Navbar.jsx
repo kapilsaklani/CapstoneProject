@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaHospital, FaUserCircle, FaSignOutAlt, FaArrowLeft } from "react-icons/fa";
+import { FaHospital, FaUserCircle, FaSignOutAlt, FaArrowLeft, FaRobot } from "react-icons/fa";
 import { useToast } from "../context/ToastContext";
 
 import "../styles/AppShell.css";
@@ -40,6 +40,11 @@ function Navbar() {
             </div>
 
             <div className="app-navbar__right">
+                <Link to={isCaretaker ? "/caretaker/ai-copilot" : "/patient/ai-agent"} className="app-navbar__agent-link">
+                    <FaRobot />
+                    <span>{isCaretaker ? "Doctor AI Co-Pilot" : "AI Health Assistant"}</span>
+                </Link>
+
                 <Link to={isCaretaker ? "/caretaker/profile" : "/patient/profile"} className="app-navbar__profile">
                     <FaUserCircle />
                     <span>{isCaretaker ? "Caretaker Portal" : "Patient Portal"}</span>

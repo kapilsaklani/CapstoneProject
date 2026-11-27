@@ -1,0 +1,74 @@
+{
+  "disease": "breast_cancer_screening",
+  "feature_columns": [
+    "mean radius",
+    "mean texture",
+    "mean perimeter",
+    "mean area",
+    "mean smoothness",
+    "mean compactness",
+    "mean concavity",
+    "mean concave points",
+    "mean symmetry",
+    "mean fractal dimension"
+  ],
+  "feature_importances": {
+    "mean radius": 0.1301058792228538,
+    "mean texture": 0.050345790950175835,
+    "mean perimeter": 0.14980271636095108,
+    "mean area": 0.12865169637544135,
+    "mean smoothness": 0.03052936622281632,
+    "mean compactness": 0.05063333896539148,
+    "mean concavity": 0.1745341011180931,
+    "mean concave points": 0.259057688076425,
+    "mean symmetry": 0.012240100723503696,
+    "mean fractal dimension": 0.01409932198434847
+  },
+  "logreg_coefficients": {
+    "mean radius": 1.0507409812288768,
+    "mean texture": 1.484365254497949,
+    "mean perimeter": 0.9168757530932143,
+    "mean area": 1.2088534781455162,
+    "mean smoothness": 1.1297879838631155,
+    "mean compactness": -0.3429046521266204,
+    "mean concavity": 0.8645261755713287,
+    "mean concave points": 1.671642011303153,
+    "mean symmetry": 0.42468846959549506,
+    "mean fractal dimension": -0.3756011776938727
+  },
+  "metrics": {
+    "accuracy": 0.9386,
+    "f1_score": 0.9157,
+    "roc_auc": 0.9868,
+    "n_train": 455,
+    "n_test": 114,
+    "report": {
+      "0": {
+        "precision": 0.9452054794520548,
+        "recall": 0.9583333333333334,
+        "f1-score": 0.9517241379310345,
+        "support": 72.0
+      },
+      "1": {
+        "precision": 0.926829268292683,
+        "recall": 0.9047619047619048,
+        "f1-score": 0.9156626506024096,
+        "support": 42.0
+      },
+      "accuracy": 0.9385964912280702,
+      "macro avg": {
+        "precision": 0.9360173738723689,
+        "recall": 0.9315476190476191,
+        "f1-score": 0.933693394266722,
+        "support": 114.0
+      },
+      "weighted avg": {
+        "precision": 0.9384352963933389,
+        "recall": 0.9385964912280702,
+        "f1-score": 0.9384383268099622,
+        "support": 114.0
+      }
+    }
+  },
+  "note": "Screening-support risk score only. 1 = higher-risk pattern (model-flagged malignant-leaning), 0 = lower-risk (benign-leaning). Not a diagnosis; requires biopsy/clinical confirmation."
+}
